@@ -1,10 +1,23 @@
 var path = require('path');
 var express = require('express');
+//var React = require('react');
+//var Router = require('react-router');
+//var routes = require('src/routes');
 var webpack = require('webpack');
 var config = require('./webpack.config');
 
 var app = express();
 var compiler = webpack(config);
+
+/*app.use(function (req, res, next) {
+    var router = Router.create({location: req.url, routes: routes});
+
+    router.run(function (Handler, state) {
+        var html = React.renderToString(React.createElement('<Handler />'));
+
+        return res.render('react_page', {html: html});
+    })
+});*/
 
 app.use(require('webpack-dev-middleware')(compiler, {
     noInfo: true,
@@ -17,7 +30,7 @@ app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.listen(3000, 'localhost', function (err) {
+app.listen(4010, 'localhost', function (err) {
   if (err) {
     console.log(err);
     return;
