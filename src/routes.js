@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Route, DefaultRoute, NotFoundRoute } from 'react-router';
 import { App } from './App.js';
 import Home from './Home';
-import Gallery  from './Gallery';
+import Gallery from './Gallery';
+import ToDo from './ToDo';
 import { NotFound } from './NotFound.js';
 
 export let routes = (
@@ -10,6 +11,7 @@ export let routes = (
             <DefaultRoute handler={Home} />
             <Route name="home" handler={Home} />
             <Route name="gallery" handler={Gallery} />
+            <Route name="todolist" handler={ToDo} />
             <Route name="404" handler={NotFound} />
             <NotFoundRoute handler={NotFound} />
         </Route>

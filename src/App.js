@@ -34,8 +34,10 @@ export class App extends Component {
     return (
       <div>
         <Header />
+        <Header />
         <Counter increment={1} color={NICE} />
         <Counter increment={10} color={SUPER_NICE} />
+        <Counter increment={20} color={'red'} />
         <RouteHandler routerState={this.props.routerState}/>
       </div>
     );
