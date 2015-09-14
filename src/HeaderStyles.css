@@ -1,0 +1,8 @@
+.item {
+    list-style: none;
+    display: inline-block;
+}
+
+h1 {
+    font-weight: normal;
+}
